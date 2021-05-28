@@ -14,5 +14,7 @@ return array(
   'dbName' => 'readme_games',
   'dbUsername' => 'root',
   'dbPassword' => '',
+  'serverBasePath' => 'https://halb.it/readme-games/',
+  'serverBasePath' => 'http://localhost/readme-games/',
 );
 

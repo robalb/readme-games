@@ -7,7 +7,7 @@ class Increment extends Game{
    * image resource endpoint
    * @param $resource String - the resource name requested
    * @param $data mixed array - the stored game data
-   * must send an image to the client
+   * this function must contain code that sends an image to the client
    */
   public static function resource($resource, $data){
     //return an image here, based on the resource requested and the data in $data
@@ -22,6 +22,7 @@ class Increment extends Game{
       $fontcolor = imagecolorallocate($img, 255,255,255);
       $fontcolor = imagecolorallocate($img, 120, 60, 200);
       $fontcolor = imagecolorallocate($img, 49, 109, 202);
+      $fontcolor = imagecolorallocate($img, 235, 31, 106);
       imagestring($img, 80, 10, 10, $text, $fontcolor);
       header("Content-Type: image/png");
       header("Cache-Control: private, max-age=0, no-cache");
@@ -29,13 +30,13 @@ class Increment extends Game{
       imagedestroy($img);
     }
     else if($resource === "increment_bt"){
-      $filePath = self::getAsset("increment/green-bt-sized2.png");
+      $filePath = self::getAsset("increment/red-bt-sized-compressed.png");
       // open the file in a binary mode
       $fp = fopen($filePath, 'rb');
 
       // send the right headers
       header("Content-Type: image/png");
-      header("Cache-Control: no-store");
+      /* header("Cache-Control: no-store"); */
       header("Content-Length: " . filesize($filePath));
 
       // dump the picture and stop the script
