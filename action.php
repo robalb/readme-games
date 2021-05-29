@@ -50,7 +50,7 @@ if($writeData && ($writeData != $data)){
 
 if(isset($_GET['testing'])){
   $config = require dirname(__FILE__).'/core/config/config.php';
-  $markdownLocation = $config['serverBasePath'] . "markdown.php";
+  $markdownLocation = $config['serverBasePath'] . "markdown.php?g=$g";
 }
 else{
   $markdownLocation = $games[$g]["markdown-location"];

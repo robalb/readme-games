@@ -29,7 +29,7 @@ class Game {
     $data = [];
     //if the query worked, return the data json decoded
     if($res){
-      $data = json_decode($res['game_data']);
+      $data = json_decode($res['game_data'], true);
     }
     //attempt to create the record in the db
     else if($success){

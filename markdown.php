@@ -43,9 +43,9 @@ $productionMarkdownFile = htmlspecialchars(replaceData($url, $markdownFile, fals
 echo "<p>games: <br>";
 foreach(array_keys($games) as $key){
   if($key == $gameId)
-    echo "<a>[$key]</a>";
+    echo "<a>[$key]</a><br>";
   else
-    echo "<a href=\"?g=$key\"> $key </a>";
+    echo "<a href=\"?g=$key\"> $key </a><br>";
 }
 echo "<p>server url: $url</p>";
 echo "<p>markdown location: {$game['markdown-location']}</p>";
