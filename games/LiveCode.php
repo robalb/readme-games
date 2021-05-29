@@ -24,34 +24,20 @@ class LiveCode extends Game{
     $data = self::initData($data);
     if($resource === "counter"){
       $count = $data['count'];
-      $text = "This button has been pressed $count times";
+      $text = "Counter value: $count";
       $img = imagecreate(390, 38);
       imagesavealpha($img, true);
       $color = imagecolorallocatealpha($img, 0, 0, 0, 127);
       imagefill($img, 0, 0, $color);
-      $fontcolor = imagecolorallocate($img, 235, 31, 106);
+      $fontcolor = imagecolorallocate($img, 153, 153, 153);
       imagestring($img, 80, 10, 10, $text, $fontcolor);
       header("Content-Type: image/png");
       header("Cache-Control: private, max-age=0, no-cache");
       imagepng($img);
       imagedestroy($img);
     }
-    else if($resource === "last"){
-      $country = $data['lastclick'];
-      $text = "The last person that clicked here was $country";
-      $img = imagecreate(390, 38);
-      imagesavealpha($img, true);
-      $color = imagecolorallocatealpha($img, 0, 0, 0, 127);
-      imagefill($img, 0, 0, $color);
-      $fontcolor = imagecolorallocate($img, 235, 31, 106);
-      imagestring($img, 80, 10, 10, $text, $fontcolor);
-      header("Content-Type: image/png");
-      header("Cache-Control: private, max-age=0, no-cache");
-      imagepng($img);
-      imagedestroy($img);
-    }
-    else if($resource === "increment_bt"){
-      $filePath = self::getAsset("increment/red-bt-sized-compressed.png");
+    else if($resource === "htmlbt"){
+      $filePath = self::getAsset("live-code/htmlbutton-smaller.png");
       // open the file in a binary mode
       $fp = fopen($filePath, 'rb');
 

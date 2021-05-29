@@ -56,3 +56,5 @@ echo $Parsedown->text($previewMarkdownFile);
 
 echo "<br><h3>here is your production markdown</h3>";
 echo "<pre><code>$productionMarkdownFile</code></pre>";
+echo "<p>good colors for both dark and light theme title_color: #eb1f6a | icon_color: #e28905 | text_color: #999999 | bg_color: #27282200</p>";
+echo "<button>click here</button>";

@@ -1,11 +1,12 @@
 ```jsx
 import React, { useState } from 'react';
+import 'styles.css';
 
 function liveCode() {
   const [clicks, setClicks] = useState(0);
   return (
     <div>
-      <p>the button has been clicked {clicks} times</p>
+      <p>Counter value: {clicks}</p>
       <button onClick={() => setClicks(clicks + 1)}>
         click here
       </button>
@@ -14,13 +15,10 @@ function liveCode() {
 }
 ```
 
-<p align="center">
+
+### Live result
   <a align="center" href="%action%increment">
-    <img src="%resource%increment_bt">
+    <img src="%resource%htmlbt">
   </a>
-</p>
-<p align="center">
-  <img src="%resource%counter">
-  <img src="%resource%last">
-</p>
+    <img src="%resource%counter">
 
